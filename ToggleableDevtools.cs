@@ -51,6 +51,7 @@ namespace AutoDisableDevtools
         private void RainWorld_Start(On.RainWorld.orig_Start orig, RainWorld self)
         {
             orig(self);
+            self.buildType = RainWorld.BuildType.Development;
             On.Player.Update += Player_Update;
         }
 
